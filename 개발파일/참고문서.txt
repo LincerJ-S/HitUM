@@ -1,0 +1,40 @@
+소리재생 방식
+1. 노트와 멜로디 스피어가 만나면 파괴 발생.
+2. 일련의 방식으로 신호를 줌. 부모 tile에다가
+3. 부모 tile에 소리를 재생시킴.
+
+2번 방식 생각중....
+
+1. 파괴 발생
+2. 파티클 발생
+멜로디 스피어에서 재생
+
+3. 재생
+
+
+완성
+
+- 각 도레미파솔라시도 개정은?
+1. 스피어 프리팹을 7개~ 15개 만들어 냅니다.
+-> 파티클도 15개씩ㄷㄷㄷㄷ.
+2. 스피어 
+
+1. 문제1 Basespawnstate를 this.transform으로 바꾸고 싶다.(ok)
+2. 스피드를 public static으로 해서 총괄하는 걸로 바꾸자.
+-멜로디 스피어 속도
+-발사속도
+두개가 같은메소드니까 하나 더만들자
+
+해당 객체에서 이벤트 발생시 타 객체에 정보넘기는 법.
+본인 객체 : A 타 객체 : B
+0. A에서 B에 해당하는 instance를 생성후 Getcompo로 받아옴.
+인스턴스 = B
+private gameController;
+void start(){
+ gameController= gameControllerObject.GetComponent <GameController>();
+}
+1. A에서 일련의 이벤트 발생함.
+2. A에서 생성한 인스턴스에 메소드 실행 -> B가 메소드 실행한것과 같음.
+3. B의 정보가 바뀜.
+
+응용해서 audiosource.clip = Line(Line에서 가지고 있는 clip파일)
